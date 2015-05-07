@@ -7,20 +7,40 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-frontend',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'id'                  => 'app-frontend',
+    'basePath'            => dirname(__DIR__),
+    'bootstrap'           => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-        'user' => [
-            'identityClass' => 'common\models\User',
+    'modules'             => [
+        'queue' => [
+            'class' => 'frontend\modules\queue\Module',
+        ],
+    ],
+    'components'          => [
+        'user'         => [
+            'identityClass'   => 'common\models\User',
             'enableAutoLogin' => true,
         ],
-        'log' => [
+        'urlManager'   => [
+            'enablePrettyUrl' => true,
+            'showScriptName'  => false,
+            'rules'           => [
+                '<controller:\w+>/<action:\w+>/<id:\d+>'                         => '<controller>/<action>',
+                '<module:(queue|admins)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
+            ],
+        ],
+        'beanstalk'    => [
+            'class'          => 'udokmeci\yii2beanstalk\Beanstalk',
+            'host'           => "127.0.0.1", // default host
+            'port'           => 11300, //default port
+            'connectTimeout' => 1,
+            'sleep'          => false, // or int for usleep after every job
+        ],
+        'log'          => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
+            'targets'    => [
                 [
-                    'class' => 'yii\log\FileTarget',
+                    'class'  => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
             ],
@@ -29,5 +49,12 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
-    'params' => $params,
+
+    'params'              => $params,
+    'controllerMap'       => [
+        'worker' => [
+            'class' => 'app\commands\WorkerController',
+        ]
+
+    ],
 ];

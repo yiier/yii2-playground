@@ -11,8 +11,8 @@ class DefaultController extends Controller
         $r1 = rand(1000, 9999);
         $r2 = rand(1000, 9999);
         $mixedData = "{{$r1}:{$r2}}";
-        $tube = \Yii::$app->beanstalk->putInTube('tube', $mixedData);
-        var_dump($tube);
+        \Yii::$app->beanstalk->putInTube('tube', $mixedData);
+        var_dump($mixedData);
         return $this->render('index');
     }
 }

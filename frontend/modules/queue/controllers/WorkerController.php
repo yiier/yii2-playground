@@ -37,6 +37,7 @@ class WorkerController extends BeanstalkController
         $date = date("Y-m-d H:i:s");
         file_put_contents("test.txt", "[{$date}]Hello World. Testing!\n", FILE_APPEND);;
         var_dump($sentData);
+        var_dump($job);
         return false;
     }
 }

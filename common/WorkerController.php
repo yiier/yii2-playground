@@ -5,7 +5,7 @@
  * description:
  */
 
-namespace frontend\modules\queue\controllers;
+namespace common;
 
 use udokmeci\yii2beanstalk\BeanstalkController;
 use yii\helpers\Console;

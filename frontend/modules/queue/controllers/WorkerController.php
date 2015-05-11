@@ -24,7 +24,7 @@ class WorkerController extends BeanstalkController
 
     public function listenTubes()
     {
-        return ["tube"];
+        return ['tube', 'test'];
     }
 
     /**
@@ -32,6 +32,16 @@ class WorkerController extends BeanstalkController
      * @return string
      */
     public function actionTube($job)
+    {
+        $sentData = $job->getData();
+        $date = date("Y-m-d H:i:s");
+        file_put_contents("test.txt", "[{$date}]Hello World. Testing!\n", FILE_APPEND);;
+        var_dump($sentData);
+        var_dump($job);
+        return false;
+    }
+
+    public function actionTest($job)
     {
         $sentData = $job->getData();
         $date = date("Y-m-d H:i:s");

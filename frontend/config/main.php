@@ -21,14 +21,14 @@ return [
             'identityClass'   => 'common\models\User',
             'enableAutoLogin' => true,
         ],
-        'urlManager'   => [
-            'enablePrettyUrl' => true,
-            'showScriptName'  => false,
-            'rules'           => [
-                '<controller:\w+>/<action:\w+>/<id:\d+>'                         => '<controller>/<action>',
-                '<module:(queue|admins)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
-            ],
-        ],
+        //'urlManager'   => [
+        //    'enablePrettyUrl' => true,
+        //    'showScriptName'  => false,
+        //    'rules'           => [
+        //        '<controller:\w+>/<action:\w+>/<id:\d+>'                         => '<controller>/<action>',
+        //        '<module:(queue|admins)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
+        //    ],
+        //],
         'beanstalk'    => [
             'class'          => 'udokmeci\yii2beanstalk\Beanstalk',
             'host'           => "127.0.0.1", // default host

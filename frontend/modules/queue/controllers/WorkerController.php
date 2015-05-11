@@ -5,7 +5,7 @@
  * description:
  */
 
-namespace common;
+namespace frontend\modules\queue\controllers;
 
 use udokmeci\yii2beanstalk\BeanstalkController;
 use yii\helpers\Console;
@@ -55,8 +55,8 @@ class WorkerController extends BeanstalkController
             //    Yii::$app->beanstalk->release($job);
             //    return self::NO_ACTION;
             //}
-
-            fwrite(STDOUT, Console::ansiFormat("- Not everything is allright!!!" . "\n", [Console::FG_GREEN]));
+            $date = date("Y-m-d H:i:s");
+            file_put_contents("test.txt", "[{$date}]Hello World. Testing!\n", FILE_APPEND);;
             //Decay the job to try DELAY_MAX times.
             return self::DECAY;
 

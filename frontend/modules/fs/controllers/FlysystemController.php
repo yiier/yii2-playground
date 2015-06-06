@@ -27,7 +27,12 @@ class FlysystemController extends \yii\web\Controller
 
         $content = '';
         if ($exists) {
-            $content = Yii::$app->fs->read('filename.ext');
+            // 获取文件的MIME信息
+            $mimeType = Yii::$app->fs->getMimetype($fileName);
+
+            $content .= 'MIME TYPE : '.$mimeType .' </br> ' ;
+
+            $content  .=  Yii::$app->fs->read('filename.ext');
         } else {
             $content = '文件不存在 访问失败';
         }
@@ -87,6 +92,7 @@ class FlysystemController extends \yii\web\Controller
                          */
                         // 图片文件的内容嵌入到img 中： http://stackoverflow.com/search?q=html+image+data+base64
                         // @see http://stackoverflow.com/questions/1124149/is-embedding-background-image-data-into-css-as-base64-good-or-bad-practice
+                        // TODO 这里文件的mime 可以用它文件系统组件来探测！
                         $img = Html::img('data:image/gif;base64,' . base64_encode(Yii::$app->fs->read($fileName)), ['width' => '300px']);
 
                         // 删除掉所上传的文件

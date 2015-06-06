@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(
         [
-            // 下面的这个配置对
+            // 下面的这个配置对上传文件很重要！
             'options' => ['enctype' => 'multipart/form-data'] // important for upload file
         ]
     ); ?>

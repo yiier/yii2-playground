@@ -18,6 +18,10 @@ return [
         'ui' => [
             'class' => 'app\modules\ui\Module',
         ],
+        // for file system
+        'fs' => [
+            'class' => 'frontend\modules\fs\Module',
+        ],
     ],
     'components'          => [
         'user'         => [
@@ -43,6 +47,12 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+
+        //...
+        'fs' => [
+            'class' => 'creocoder\flysystem\LocalFilesystem',
+            'path' => '@webroot/uploads/files',
         ],
     ],
     'params'              => $params,

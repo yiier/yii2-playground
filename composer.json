@@ -18,7 +18,12 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "udokmeci/yii2-beanstalk" : "dev-master"
+        "udokmeci/yii2-beanstalk" : "dev-master",
+
+        "league/flysystem-replicate-adapter": "~1.0",
+        "creocoder/yii2-flysystem": "^0.8.1"
+
+
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

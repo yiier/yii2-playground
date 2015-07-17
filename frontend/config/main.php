@@ -22,6 +22,10 @@ return [
         'fs' => [
             'class' => 'frontend\modules\fs\Module',
         ],
+        // for the category others
+        'others' => [
+            'class' => 'frontend\modules\others\Module',
+        ],
     ],
     'components'          => [
         'user'         => [

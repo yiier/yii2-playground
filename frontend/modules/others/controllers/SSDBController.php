@@ -10,6 +10,9 @@ namespace frontend\modules\others\controllers;
 
 
 use ijackwu\ssdb\Connection;
+use yii\helpers\Html;
+use yii\helpers\Inflector;
+use yii\helpers\StringHelper;
 use yii\web\Controller;
 
 class SsdbController extends Controller
@@ -57,6 +60,38 @@ class SsdbController extends Controller
         }
 
         return $result;
+    }
+
+    public function  actionIndex()
+    {
+        $actions = [];
+        $rc = new \ReflectionClass($this);
+        $publicMethods = $rc->getMethods(\ReflectionMethod::IS_PUBLIC);
+
+        $availableActions = [] ;
+        foreach($publicMethods as $publicMethod)
+        {
+             $methodName = $publicMethod->name ;
+            if($methodName == 'actions'){
+                continue ;
+            }
+             if(StringHelper::startsWith($methodName,'action')){
+
+                 $availableActions[] = $methodName ;
+             }
+        }
+        if(count($this->actions()) > 0){
+            $availableActions = $availableActions + array_keys($this->actions());
+        }
+
+        $menus = [] ;
+        foreach($availableActions as $actionName){
+            $routeId = Inflector::camel2id( substr($actionName,strlen('action'))) ;
+            $menus[] = Html::a($actionName,[$routeId]);
+        }
+
+        echo implode('<br/>',$menus) ;
+
     }
 
     /**

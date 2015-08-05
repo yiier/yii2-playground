@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\ui\controllers;
+namespace playground\ui\controllers;
 
 class Yii2FormBuilderController extends \yii\web\Controller
 {

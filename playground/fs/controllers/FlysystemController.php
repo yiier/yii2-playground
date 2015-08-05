@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\fs\controllers;
+namespace playground\fs\controllers;
 
 use Yii;
 use yii\base\DynamicModel;

@@ -6,7 +6,7 @@
  * Time: 12:33
  */
 
-namespace frontend\modules\others\controllers;
+namespace playground\others\controllers;
 
 
 use ijackwu\ssdb\Connection;

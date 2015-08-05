@@ -13,18 +13,18 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'modules'             => [
         'queue' => [
-            'class' => 'frontend\modules\queue\Module',
+            'class' => 'playground\queue\Module',
         ],
         'ui' => [
-            'class' => 'app\modules\ui\Module',
+            'class' => 'playground\ui\Module',
         ],
         // for file system
         'fs' => [
-            'class' => 'frontend\modules\fs\Module',
+            'class' => 'playground\fs\Module',
         ],
         // for the category others
         'others' => [
-            'class' => 'frontend\modules\others\Module',
+            'class' => 'playground\others\Module',
         ],
     ],
     'components'          => [

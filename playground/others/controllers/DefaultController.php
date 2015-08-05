@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\others\controllers;
+namespace playground\others\controllers;
 
 use yii\web\Controller;
 

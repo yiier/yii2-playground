@@ -6,7 +6,7 @@
  * Time: 7:13
  */
 
-namespace frontend\modules\ui\controllers;
+namespace playground\ui\controllers;
 
 
 use yii\web\Controller;
@@ -16,7 +16,7 @@ use yii\web\Controller;
  * @see https://github.com/search?utf8=%E2%9C%93&q=yii2++pagesize
  *
  * Class PageSizeController
- * @package frontend\modules\ui\controllers
+ * @package playground\ui\controllers
  */
 class PageSizeController extends Controller{
 

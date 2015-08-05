@@ -1,10 +1,10 @@
 <?php
 
-namespace frontend\modules\queue;
+namespace playground\ui;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'frontend\modules\queue\controllers';
+    public $controllerNamespace = 'playground\ui\controllers';
 
     public function init()
     {

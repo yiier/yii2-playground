@@ -31,7 +31,9 @@
         "ijackwu/yii2-ssdb": "dev-master",
         "yiisoft/yii2-jui": "^2.0"
 
-      ,"beastbytes/yii2-wizard": "*"
+      ,"beastbytes/yii2-wizard": "*",
+
+      "mdmsoft/yii2-format-converter": "*"
 
     },
     "require-dev": {

@@ -26,6 +26,10 @@ return [
         'others' => [
             'class' => 'playground\others\Module',
         ],
+        // for the category database
+        'db' => [
+            'class' => 'playground\db\frontend\Module',
+        ],
     ],
     'components'          => [
         'user'         => [

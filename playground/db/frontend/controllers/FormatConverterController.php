@@ -23,7 +23,6 @@ class FormatConverterController extends \yii\web\Controller
             ]
         ]);
 
-
         var_dump($model->createAt) ;
 
         $model->createAt = '10/59/2015' ;

@@ -6,3 +6,4 @@ Yii::setAlias('console', dirname(dirname(__DIR__)) . '/console');
 
 
 Yii::setAlias('playground', dirname(dirname(__DIR__)) . '/playground');
+Yii::setAlias('yiier', dirname(dirname(__DIR__)) . '/yiier');

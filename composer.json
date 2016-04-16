@@ -33,14 +33,22 @@
 
       ,"beastbytes/yii2-wizard": "*",
 
-      "mdmsoft/yii2-format-converter": "*"
+      "mdmsoft/yii2-format-converter": "*",
+      "zhuravljov/yii2-rest": "*",
+      "yiisoft/yii2-httpclient": "@dev",
+
+      "mouf/nodejs-installer":"*"
 
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*"
+        "yiisoft/yii2-faker": "*",
+
+      "ivanovyordan/yii2-migration": "*",
+      "c006/yii2-migration-utility": "dev-master",
+      "jamband/yii2-schemadump": "*"
     },
     "config": {
         "process-timeout": 1800
@@ -50,5 +58,7 @@
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
         }
-    }
+    },
+  "post-install-cmd": "ivanovyordan\\migration\\Migration::migrate",
+  "post-update-cmd": "ivanovyordan\\migration\\Migration::migrate"
 }

@@ -12,6 +12,9 @@ return [
     'bootstrap'           => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules'             => [
+        'core' => [
+            'class' => 'playground\core\frontend\Module',
+        ],
         'queue' => [
             'class' => 'playground\queue\Module',
         ],
@@ -29,6 +32,10 @@ return [
         // for the category database
         'db' => [
             'class' => 'playground\db\frontend\Module',
+        ],
+        'rest-client' => [
+            'class' => 'zhuravljov\yii\rest\Module',
+            'baseUrl' => 'http://localhost/api/v1',
         ],
     ],
     'components'          => [

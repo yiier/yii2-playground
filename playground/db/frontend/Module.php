@@ -2,7 +2,11 @@
 
 namespace playground\db\frontend;
 
-class Module extends \yii\base\Module
+use playground\core\frontend\contracts\ModuleNav;
+
+class Module
+    extends \yii\base\Module
+    implements ModuleNav
 {
     public $controllerNamespace = 'playground\db\frontend\controllers';
 
@@ -11,5 +15,18 @@ class Module extends \yii\base\Module
         parent::init();
 
         // custom initialization code goes here
+    }
+
+    /**
+     * navigation for current module
+     *
+     * @return mixed|array
+     */
+    public static function getNavConfig()
+    {
+        return [
+            'label' => 'db',
+            'url' => ['/db'],
+        ];
     }
 }

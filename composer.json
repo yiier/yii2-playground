@@ -48,7 +48,9 @@
 
       "ivanovyordan/yii2-migration": "*",
       "c006/yii2-migration-utility": "dev-master",
-      "jamband/yii2-schemadump": "*"
+      "jamband/yii2-schemadump": "*",
+
+      "nizsheanez/yii2-json-rpc": "1.*"
     },
     "config": {
         "process-timeout": 1800

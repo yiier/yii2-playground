@@ -37,6 +37,10 @@ return [
             'class' => 'zhuravljov\yii\rest\Module',
             'baseUrl' => 'http://localhost/api/v1',
         ],
+        // for the category web service
+        'webservice' => [
+            'class' => 'playground\webservice\Module',
+        ],
     ],
     'components'          => [
         'user'         => [

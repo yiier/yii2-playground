@@ -29,4 +29,19 @@ class Module
             'url' => ['/db'],
         ];
     }
+    /**
+     * for module sidebar
+     *
+     * @return array|mix
+     */
+    public static function getSidebar()
+    {
+        return [
+            [
+                'label'=>'format-converter',
+                'url'=>['/db/format-converter']
+            ],
+
+        ];
+    }
 }

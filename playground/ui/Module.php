@@ -28,4 +28,21 @@ implements ModuleNav
         ];
 
     }
+
+    /**
+     * for module sidebar
+     *
+     * todo 后期支持返回widget 作为sidebar 要么就返回配置 如果是皮肤功能 只有使用widget 可以做到“可皮肤化”
+     * @return array|mix
+     */
+    public static function getSidebar()
+    {
+        return [
+            [
+                'label'=>'Wizard',
+                'url'=>['/ui/wizard']
+            ],
+
+        ];
+    }
 }

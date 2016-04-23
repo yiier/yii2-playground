@@ -10,7 +10,7 @@ namespace yiier\web\map;
 
 
 class MapIterator
-    implements Iterator
+    implements \Iterator
 {
     /**
      * @var array the data to be iterated through

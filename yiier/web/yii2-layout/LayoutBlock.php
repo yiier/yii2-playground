@@ -170,7 +170,7 @@ class LayoutBlock
     /**
      *
      */
-    public function render($return = false, $renderTag = true)
+    public  function render($return = false, $renderTag = true)
     {
         $block = $this->_content;
         if ($renderTag) {

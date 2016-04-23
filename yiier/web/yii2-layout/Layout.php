@@ -83,7 +83,7 @@ class Layout
     /**
      *
      */
-    public function getBlocks($regionId, $visibleOnly = true)
+    public static function getBlocks($regionId, $visibleOnly = true)
     {
         $instance = self::getInstance();
 

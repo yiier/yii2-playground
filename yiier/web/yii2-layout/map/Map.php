@@ -13,7 +13,6 @@ use yii\base\Component;
 use yii\base\Exception;
 
 class Map
-
     extends Component
     implements \IteratorAggregate, \ArrayAccess, \Countable
 {
@@ -31,7 +30,7 @@ class Map
      * Initializes the list with an array or an iterable object.
      * @param array $data the initial data. Default is null, meaning no initialization.
      * @param boolean $readOnly whether the list is read-only
-     * @throws CException If data is not null and neither an array nor an iterator.
+     * @throws Exception If data is not null and neither an array nor an iterator.
      */
     public function __construct($data = null, $readOnly = false)
     {
@@ -113,7 +112,7 @@ class Map
      * Note, if the specified key already exists, the old value will be overwritten.
      * @param mixed $key key
      * @param mixed $value value
-     * @throws CException if the map is read-only
+     * @throws Exception if the map is read-only
      */
     public function add($key, $value)
     {
@@ -130,7 +129,7 @@ class Map
      * Removes an item from the map by its key.
      * @param mixed $key the key of the item to be removed
      * @return mixed the removed value, null if no such key exists.
-     * @throws CException if the map is read-only
+     * @throws Exception if the map is read-only
      */
     public function remove($key)
     {
@@ -178,7 +177,7 @@ class Map
      * Copies iterable data into the map.
      * Note, existing data in the map will be cleared first.
      * @param mixed $data the data to be copied from, must be an array or object implementing Traversable
-     * @throws CException If data is neither an array nor an iterator.
+     * @throws Exception If data is neither an array nor an iterator.
      */
     public function copyFrom($data)
     {
@@ -208,7 +207,7 @@ class Map
      * @param mixed $data the data to be merged with, must be an array or object implementing Traversable
      * @param boolean $recursive whether the merging should be recursive.
      *
-     * @throws CException If data is neither an array nor an iterator.
+     * @throws Exception If data is neither an array nor an iterator.
      */
     public function mergeWith($data, $recursive = true)
     {

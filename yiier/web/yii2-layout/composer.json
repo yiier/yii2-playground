@@ -1,0 +1,21 @@
+{
+    "name": "yiier/yii2-layout",
+    "description": "allow you  to pass page block to layout file  in view  files",
+    "type": "library",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yiier",
+            "email": "yiqing_95@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiier\\web\\": ""
+        }
+    }
+}

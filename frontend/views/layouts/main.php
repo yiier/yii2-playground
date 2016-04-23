@@ -19,5 +19,6 @@ if (method_exists($module, 'getSidebar')):?>
 <?php endif ?>
 
 <?= $content ?>
+<?= \yiier\web\AutoloadExample::widget(); ?>`
 
 <?php $this->endContent(); ?>

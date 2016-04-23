@@ -16,6 +16,10 @@
     {
       "type":"vcs",
       "url":"https://github.com/ijackwu/yii2-ssdb"
+    },
+    {
+      "type": "path",
+      "url": "./yiier/web/yii2-layout"
     }
   ],
     "minimum-stability": "stable",
@@ -37,7 +41,11 @@
       "zhuravljov/yii2-rest": "*",
       "yiisoft/yii2-httpclient": "@dev",
 
-      "mouf/nodejs-installer":"*"
+      "mouf/nodejs-installer":"*",
+
+      "nizsheanez/yii2-json-rpc": "1.*",
+
+      "yiier/yii2-layout": "dev-master"
 
     },
     "require-dev": {
@@ -48,9 +56,8 @@
 
       "ivanovyordan/yii2-migration": "*",
       "c006/yii2-migration-utility": "dev-master",
-      "jamband/yii2-schemadump": "*",
+      "jamband/yii2-schemadump": "*"
 
-      "nizsheanez/yii2-json-rpc": "1.*"
     },
     "config": {
         "process-timeout": 1800

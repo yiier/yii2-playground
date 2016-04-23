@@ -42,7 +42,10 @@ implements ModuleNav
                 'label'=>'Wizard',
                 'url'=>['/ui/wizard']
             ],
-
+            [
+                'label'=>'Layout',
+                'url'=>['/ui/layout']
+            ],
         ];
     }
 }

@@ -13,6 +13,10 @@ return [
     'controllerNamespace' => 'console\controllers',
     'modules' => [
         'gii' => 'yii\gii\Module',
+
+        'networking' => [
+            'class' => 'playground\networking\console\Module',
+        ],
     ],
     'components' => [
         'log' => [

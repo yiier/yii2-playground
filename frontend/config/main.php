@@ -41,6 +41,29 @@ return [
         'webservice' => [
             'class' => 'playground\webservice\Module',
         ],
+
+        'auth' => [
+            'class' => 'playground\auth\Module',
+        ],
+        'caching' => [
+            'class' => 'playground\caching\Module',
+        ],
+        'logging' => [
+            'class' => 'playground\logging\Module',
+        ],
+        'mail' => [
+            'class' => 'playground\mail\Module',
+        ],
+        'networking' => [
+            'class' => 'playground\networking\front\Module',
+        ],
+        'security' => [
+            'class' => 'playground\security\Module',
+        ],
+        'validation' => [
+            'class' => 'playground\validation\Module',
+        ],
+
     ],
     'components'          => [
         'user'         => [

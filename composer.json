@@ -22,7 +22,9 @@
       "url": "./yiier/web/yii2-layout"
     }
   ],
-    "minimum-stability": "stable",
+  "minimum-stability": "alpha",
+  "prefer-stable": true,
+
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
@@ -45,7 +47,9 @@
 
       "nizsheanez/yii2-json-rpc": "1.*",
 
-      "yiier/yii2-layout": "dev-master"
+      "yiier/yii2-layout": "dev-master",
+
+      "sammaye/yii2-elephantio":"dev-master"
 
     },
     "require-dev": {

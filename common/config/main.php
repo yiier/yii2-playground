@@ -14,8 +14,10 @@ return [
         ],
     ],
     'controllerMap' => [
+        /*
         'worker'=>[
             'class' => 'frontend\modules\queue\controllers\WorkerController',
         ]
+        */
     ],
 ];

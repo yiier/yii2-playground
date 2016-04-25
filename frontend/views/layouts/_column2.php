@@ -23,7 +23,7 @@ use yii\helpers\Html;
                 $label = '<i class="glyphicon glyphicon-chevron-right"></i>' . Html::encode($actionConf['label']);
                 echo Html::a($label, $actionConf['url'], [
                     // 'class' => $generator === $activeGenerator ? 'list-group-item active' : 'list-group-item',
-                ]);
+                ]) , '<br/>';
             }
             ?>
         </div>

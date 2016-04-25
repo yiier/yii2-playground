@@ -2,6 +2,7 @@
 
 namespace playground\queue;
 
+use playground\core\frontend\components\ActionsDetectable;
 use playground\core\frontend\contracts\ModuleNav;
 
 class Module
@@ -17,6 +18,7 @@ class Module
         // custom initialization code goes here
     }
 
+    use ActionsDetectable;
     /**
      * navigation for current module
      *

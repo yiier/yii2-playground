@@ -1,6 +1,7 @@
 <?php
 
 namespace playground\webservice;
+use playground\core\frontend\components\ActionsDetectable;
 use playground\core\frontend\contracts\ModuleNav;
 
 /**
@@ -25,6 +26,7 @@ implements ModuleNav
         // custom initialization code goes here
     }
 
+    use ActionsDetectable ;
     /**
      * navigation for current module
      *

@@ -12,6 +12,11 @@ return [
             'connectTimeout' => 1,
             'sleep'          => false, // or int for usleep after every job
         ],
+        'elephantio' => [
+            'class' => 'sammaye\elephantio\ElephantIo',
+            // 'host' => 'http://localhost:3000'
+            'host' => 'http://localhost:8083' // emqtt默认的socketio监听端口
+        ]
     ],
     'controllerMap' => [
         /*

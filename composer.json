@@ -49,7 +49,8 @@
 
       "yiier/yii2-layout": "dev-master",
 
-      "sammaye/yii2-elephantio":"dev-master"
+      "sammaye/yii2-elephantio":"dev-master",
+      "textalk/websocket": "1.0.*"
 
     },
     "require-dev": {

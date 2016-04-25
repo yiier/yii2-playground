@@ -63,7 +63,9 @@ return [
         'validation' => [
             'class' => 'playground\validation\Module',
         ],
-
+        'nosql' => [
+            'class' => 'playground\nosql\frontend\Module',
+        ],
     ],
     'components'          => [
         'user'         => [
